@@ -1,0 +1,21 @@
+      create  app/controllers/users_controller.rb
+       route  get "users/ "
+       route  get "users/new"
+      invoke  erb
+      create    app/views/users
+      create    app/views/users/new.html.erb
+      create    app/views/users/ .html.erb
+      invoke  rspec
+      create    spec/controllers/users_controller_spec.rb
+      create    spec/views/users
+      create    spec/views/users/new.html.erb_spec.rb
+      create    spec/views/users/ .html.erb_spec.rb
+      invoke  helper
+      create    app/helpers/users_helper.rb
+      invoke    rspec
+      create      spec/helpers/users_helper_spec.rb
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/users.js.coffee
+      invoke    scss
+      create      app/assets/stylesheets/users.css.scss
