@@ -76,7 +76,7 @@ describe User do
 	describe "when password confirmation is nil" do 
 		before { @user.password_confirmation = nil }
 		it { should_not be_valid }
-	end
+	end	
 
 	describe "when password is too short" do
 		before { @user.password = @user.password_confirmation = "a" * 5 }
