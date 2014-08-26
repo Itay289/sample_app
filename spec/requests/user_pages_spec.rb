@@ -34,7 +34,7 @@ describe "UserPages" do
   			# new_count.should == old_count
   		end
 
-  		describe "after submission" do
+  		describe "after submission" do    
   			before { click_button submit }
 
   			it { should have_selector('title', text: 'Sign up') }
