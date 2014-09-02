@@ -34,4 +34,11 @@ module SessionsHelper
 		redirect_to(session[:return_to] || default)
 		session.delete(:return_to)
 	end
+
+  def signed_in_user
+    unless signed_in?
+      store_location # set at the session helper
+      redirect_to signin_path, notice: "Please sign in." unless signed_in?
+    end  
+  end
 end
