@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   has_many :followers, through: :reverse_relationships, source: :follower
 
   before_save { |user| user.email = user.email.downcase }
-  before_save { generate_token (:create_remember_token) }
+  #before_save { generate_token (:create_remember_token) }
 
   validates :name, presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -50,9 +50,9 @@ class User < ActiveRecord::Base
 
   private
 
-  	def create_remember_token
-  		self.remember_token = SecureRandom.urlsafe_base64
-  	end
+  	# def create_remember_token
+  	# 	self.remember_token = SecureRandom.urlsafe_base64
+  	# end
 end
 
 
